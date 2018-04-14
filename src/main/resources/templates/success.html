@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Success</title>
+</head>
+<body>
+<h2 th:text="${hello}" th:id="${id}" th:name="${name}">这是显示的欢迎信息</h2>
+<p>
+    <!--将div里面的文本内容设置为-->
+    <h2>这是显示的欢迎信息</h2>
+<div th:text="${hello1}"></div>
+<div th:utext="${hello1}"></div>
+
+<br/>
+<a th:href="@{url}">Link1</a>
+<a th:href="@{/index.html}">Link1</a>
+</p>
+<h4 th:text="#{user}" th:each="user:${users}"></h4>
+
+
+<h4>
+
+
+    <span th:each="user:${users}">[[${user}]]</span>
+</h4>
+
+
+
+
+
+
+
+</body>
+</html>
