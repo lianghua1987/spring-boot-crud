@@ -4,6 +4,7 @@ package com.hua.springboot.config;
 import com.hua.springboot.filter.MyFilter;
 import com.hua.springboot.listener.MyListener;
 import com.hua.springboot.servlet.MyServlet;
+import org.springframework.boot.web.embedded.jetty.JettyServletWebServerFactory;
 import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.boot.web.servlet.ServletListenerRegistrationBean;
@@ -26,6 +27,7 @@ public class MyServletConfig {
     @Bean
     public ConfigurableServletWebServerFactory configurableServletWebServerFactory() {
         return new TomcatServletWebServerFactory(8085);
+        //return new JettyServletWebServerFactory(8084);
 
     }
 
